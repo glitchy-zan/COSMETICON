@@ -1,0 +1,41 @@
+<app-header></app-header>
+<app-nav-bar></app-nav-bar>
+<div class="back">
+  <div>
+    <h3>USERNAME</h3>
+    {{ user.username }}
+  </div>
+  <hr />
+
+  <div>
+    <h3>EMAIL</h3>
+    {{ user.email }}
+  </div>
+  <hr />
+
+  <div>
+    <h3>PASSWORD</h3>
+    {{ user.password }}
+    <hr>
+  </div>
+
+  <h3>ALERGENS</h3>
+  <input type="text" placeholder=" input alergen" #input />
+  <fa-icon
+    id="alg"
+    (click)="add_alergens(input.value)"
+    [icon]="plus_icon"
+  ></fa-icon>
+  <p *ngFor="let item of user.alergens; index as id">
+    <fa-icon (click)="remove_alergen(id)" [icon]="xmark_icon"></fa-icon>
+    {{ item }}
+  </p>
+  <hr>
+
+  <h3>BOOKMARKS</h3>
+  <p *ngFor="let item of user.bookmarks; index as id">
+    <fa-icon (click)="remove_bookmark(id)" [icon]="xmark_icon"></fa-icon>
+    {{ item.name }}
+  </p>
+  <hr>
+</div>

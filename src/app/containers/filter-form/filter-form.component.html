@@ -1,0 +1,89 @@
+<div class="wrap">
+  <form [action]="url">
+    <div>
+      <h3>FILTER</h3>
+    </div>
+
+    <div class="inter">
+      <button (click)="filter_open_close_1()" type="button" class="btn">
+        Choose ingredients
+        <fa-icon [icon]="arrow_icon"></fa-icon>
+      </button>
+      <div *ngFor="let ingredient of all_ingredients; index as id">
+        <p
+          *ngIf="i_yes_cond"
+          [ngStyle]="{
+            color: is_ingredient_included_in_ingredient_yes(ingredient)
+              ? 'green'
+              : 'white'
+          }"
+          (click)="set_filter_1(id)"
+        >
+          {{ ingredient }}
+        </p>
+      </div>
+    </div>
+
+    <div class="inter">
+      <button (click)="filter_open_close_2()" type="button" class="btn">
+        Choose ingredients not to include
+        <fa-icon [icon]="arrow_icon"></fa-icon>
+      </button>
+      <div *ngFor="let ingredient of all_ingredients; index as id">
+        <p
+          *ngIf="i_no_cond"
+          [ngStyle]="{
+            color: is_ingredient_included_in_ingredient_no(ingredient)
+              ? 'green'
+              : 'white'
+          }"
+          (click)="set_filter_2(id)"
+        >
+          {{ ingredient }}
+        </p>
+      </div>
+    </div>
+
+    <div class="inter">
+      <button (click)="filter_open_close_3()" type="button" class="btn">
+        Choose field
+        <fa-icon [icon]="arrow_icon"></fa-icon>
+      </button>
+      <div *ngFor="let field of all_fields; index as id">
+        <p
+          *ngIf="f_cond"
+          [ngStyle]="{
+            color: filter.field === field ? 'green' : 'white'
+          }"
+          (click)="set_filter_3(id)"
+        >
+          {{ field }}
+        </p>
+      </div>
+    </div>
+
+    <div class="inter">
+      <button (click)="filter_open_close_4()" type="button" class="btn">
+        Choose brand
+        <fa-icon [icon]="arrow_icon"></fa-icon>
+      </button>
+      <div *ngFor="let manufacturer of all_manufacturers; index as id">
+        <p
+          *ngIf="m_cond"
+          [ngStyle]="{
+            color: filter.manufacturer === manufacturer ? 'green' : 'white'
+          }"
+          (click)="set_filter_4(id)"
+        >
+          {{ manufacturer }}
+        </p>
+      </div>
+    </div>
+
+    <div>
+      <button type="submit" class="btn" id="confirm_btn" (click)="set_url()">
+        Confirm
+      </button>
+    </div>
+  </form>
+</div>

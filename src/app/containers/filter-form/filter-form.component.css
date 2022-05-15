@@ -1,0 +1,47 @@
+.wrap {
+  width: 300px;
+  margin: 30px auto;
+  border: 4px solid white;
+  padding: 45px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  background-color: #333;
+  border-radius: 20px;
+}
+
+.inter {
+  padding: 5px;
+  margin: 10px auto;
+}
+
+.btn {
+  width: 100%;
+  padding: 5px;
+
+  border-radius: 20px;
+  border-width: 3px;
+  border-color: #333;
+
+  background-color: #eee;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn:hover {
+  border-color: white;
+}
+
+#confirm_btn {
+  background-color: #ff6f61;
+  justify-content: center;
+}
+
+#confirm_btn:hover {
+  border-color: #ff6f61;
+}
+
+p{
+  cursor: pointer;
+}

@@ -1,0 +1,49 @@
+<app-header></app-header>
+<app-nav-bar></app-nav-bar>
+<div class="back">
+  <div class="front">
+    <div>
+      <h3>PRODUCT NAME</h3>
+      {{ all_products[id].name }}
+    </div>
+    <hr />
+
+    <div>
+      <h3>FIELD</h3>
+      {{ all_products[id].field }}
+    </div>
+    <hr />
+
+    <div>
+      <h3>MANUFACTURER</h3>
+      {{ all_products[id].manufacturer }}
+    </div>
+    <hr />
+    <div>
+      <h3 class="book" (click)="add_remove_bookmark()">
+        BOOKMARK
+        <fa-icon *ngIf="not_booked" [icon]="icon_not_booked"></fa-icon>
+        <fa-icon *ngIf="!not_booked" [icon]="icon_booked"></fa-icon>
+      </h3>
+    </div>
+  </div>
+
+  <div class="front">
+    <div>
+      <h2>INGREDIENTS</h2>
+      {{ all_products[id].ingredients }}
+    </div>
+  </div>
+
+  <div class="front">
+    <div>
+      <h3>HARMFUL INGREDIENTS</h3>
+      {{ all_products[id].bad_ones }}
+    </div>
+    <hr />
+    <div>
+      <h3>Ingredients that are your alergens:</h3>
+      <p *ngFor="let item of my_alergens">{{ item }}</p>
+    </div>
+  </div>
+</div>

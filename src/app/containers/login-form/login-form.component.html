@@ -1,0 +1,11 @@
+<div class="wrap">
+  <form [action]="url">
+    <h3>LOGIN</h3>
+    <p>username:</p>
+    <input type="text" required #uname />
+    <p>password:</p>
+    <input type="password" required #pass />
+    <p></p>
+    <button (click)="set_url(uname.value, pass.value)">Login</button>
+  </form>
+</div>

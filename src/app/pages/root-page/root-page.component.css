@@ -1,0 +1,8 @@
+.back-img{
+  height: calc(100vh - 150px);
+  width: auto;
+  margin: 0px -10px 0px -10px;
+  background-size: 100%;
+  background-image: url("https://www.nykaa.com/beauty-blog/wp-content/uploads/images/issue245/The-Best-Skincare-Routine_OI.jpg");
+  background-repeat: no-repeat;
+}

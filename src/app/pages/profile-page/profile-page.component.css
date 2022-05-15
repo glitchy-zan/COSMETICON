@@ -1,0 +1,32 @@
+.back {
+  height: 100%;
+  min-height: 100vh;
+  width: auto;
+  margin: -16px -8px 0px -8px;
+  padding: 50px;
+  background-size: 100%;
+  background-color: #ebd5c0;
+  background-repeat: no-repeat;
+}
+
+fa-icon {
+  cursor: pointer;
+}
+
+fa-icon:hover {
+  color: red;
+}
+
+#alg {
+  margin: 10px;
+}
+
+#alg:hover {
+  color: cadetblue;
+}
+
+input {
+  border-radius: 20px;
+  width: 100px;
+}
+

@@ -1,0 +1,29 @@
+.back {
+  height: 100%;
+  min-height: 100vh;
+  width: auto;
+  margin: -16px -8px 0px -8px;
+  padding: 50px;
+  background-size: 100%;
+  background-color: #ebd5c0;
+  background-repeat: no-repeat;
+}
+
+.front {
+  background-color: rgb(215, 193, 172);
+  margin: 30px;
+  padding: 20px 40px 20px 40px;
+
+  display: flex;
+  justify-content: space-between;
+
+  text-align: center;
+
+  border-style: solid;
+  border-radius: 20px;
+  border-color: rgb(100, 100, 100);
+}
+
+.book{
+  cursor: pointer;
+}

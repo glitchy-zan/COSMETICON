@@ -1,0 +1,13 @@
+.back {
+  height: 100vh;
+  width: auto;
+  margin: -16px -8px 0px -8px;
+  padding: 50px;
+  background-size: 100%;
+  background-color: #ebd5c0;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+
+}

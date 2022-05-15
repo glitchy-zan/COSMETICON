@@ -1,0 +1,12 @@
+<div
+  class="container"
+  *ngFor="let item of filtered_products"
+  [routerLink]="['/product', item.id]"
+>
+  <h2>{{ item.name }}</h2>
+
+  <h4>{{ item.manufacturer }}</h4>
+
+  <img [src]="item.imageUrl" />
+
+</div>
